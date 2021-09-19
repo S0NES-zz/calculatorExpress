@@ -1,0 +1,195 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  background: #080a11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html h1, body h1 {
+  font-size: 3rem;
+  font-family: 'Righteous',cursive;
+  color: #fff;
+}
+
+html div, body div {
+  width: 600px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html div a, body div a {
+  position: relative;
+  padding: 10px 50px;
+  text-decoration: none;
+  overflow: hidden;
+  letter-spacing: 4px;
+  color: #fff;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+html div a::before, body div a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+html div a::after, body div a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.4)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+html div a span, body div a span {
+  position: absolute;
+  display: block;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+html div a span:nth-child(1), body div a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+}
+
+html div a span:nth-child(2), body div a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0;
+  background: #fff;
+}
+
+html div a span:nth-child(3), body div a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+}
+
+html div a span:nth-child(4), body div a span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 0;
+  background: #fff;
+}
+
+html div a:hover:after, body div a:hover:after {
+  left: 100%;
+}
+
+html div a:hover:after span:nth-child(1), body div a:hover:after span:nth-child(1) {
+  width: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+html div a:hover:after span:nth-child(2), body div a:hover:after span:nth-child(2) {
+  height: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+html div a:hover:after span:nth-child(3), body div a:hover:after span:nth-child(3) {
+  width: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+html div a:hover:after span:nth-child(4), body div a:hover:after span:nth-child(4) {
+  height: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+html form, body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+}
+
+html form input, body form input {
+  padding: 1px 10px;
+  font-size: 1rem;
+  margin: 5px;
+  width: 100%;
+}
+
+html form button, body form button {
+  width: 100%;
+  height: 30px;
+  background: #00c066;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+}
+
+html form button:hover, body form button:hover {
+  -webkit-box-shadow: 0 5px 5px rgba(105, 105, 105, 0.2);
+          box-shadow: 0 5px 5px rgba(105, 105, 105, 0.2);
+  -webkit-transform: translate(-1px, -0.5px);
+          transform: translate(-1px, -0.5px);
+}
+/*# sourceMappingURL=style.css.map */

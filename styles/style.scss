@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+html, body{
+ width: 100vw;
+ font-family: 'Montserrat',
+ sans-serif;
+ height: 100vh;
+ background: rgb(8, 10, 17);
+ display:  flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ h1 {
+  font-size: 3rem;
+  font-family: 'Righteous',cursive;
+  color: #fff;
+ }
+ div{
+  width: 600px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+   position: relative;
+   padding: 10px 50px;
+   text-decoration: none;
+   overflow: hidden;
+   letter-spacing: 4px;
+   color: #fff;
+   border-radius: 2px;
+   background: rgba(255, 255, 255, .1);
+   box-shadow: 0 5px 5px rgba(0, 0,0, 0.2);
+  
+   &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+   }
+
+   &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+   }
+   span {
+    position: absolute;
+    display: block;
+    transition: 0.5s ease;
+    &:nth-child(1) {
+     top: 0;
+     left: 0;
+     width: 0;
+     height: 1px;
+     background: #fff;
+    }
+    &:nth-child(2) {
+     top: 0;
+     left: 0;
+     width: 1px;
+     height: 0;
+     background: #fff;
+    }
+
+    &:nth-child(3) {
+     bottom: 0;
+     right: 0;
+     width: 0;
+     height: 1px;
+     background: #fff;
+    }
+    &:nth-child(4) {
+     bottom: 0;
+     right: 0;
+     width: 1px;
+     height: 0;
+     background: #fff;
+    }
+   }
+    &:hover:after {
+     left: 100%;
+
+     span {
+      &:nth-child(1) {
+       width: 100%;
+       transform: translateX(100%);
+      }
+
+      &:nth-child(2) {
+       height: 100%;
+       transform: translateY(100%);
+      }
+
+      &:nth-child(3) {
+       width: 100%;
+       transform: translateX(-100%);
+      }
+
+      &:nth-child(4) {
+       height: 100%;
+       transform: translateY(-100%);
+      }
+     }
+    }
+  }
+ }
+ form{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin: 20px;
+   input{
+     padding: 1px 10px;
+     font-size: 1rem;
+     margin: 5px;
+     width: 100%;
+   }
+   button{
+     width: 100%;
+     height: 30px;
+     background: rgb(0, 192, 102);
+     font-size: 1rem;
+     cursor: pointer;
+     border: 0;
+     color: #fff;
+     &:hover {
+       box-shadow: 0 5px 5px rgba(105, 105, 105, 0.2);
+       transform: translate(-1px, -0.5px);
+     }
+   }
+ }
+}
