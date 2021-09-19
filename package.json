@@ -1,0 +1,23 @@
+{
+  "name": "calculatorexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon calculator.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S0NES/calculatorExpress.git"
+  },
+  "author": "Soneca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/S0NES/calculatorExpress/issues"
+  },
+  "homepage": "https://github.com/S0NES/calculatorExpress#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
